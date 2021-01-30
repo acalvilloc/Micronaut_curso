@@ -1,0 +1,5 @@
+micronaut:
+  application:
+    name: analytics
+rabbitmq:
+  uri: amqp://localhost:5672  

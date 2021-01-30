@@ -1,0 +1,8 @@
+micronaut:
+  application:
+    name: books
+micronaut:
+  server:
+    port: 8081 
+rabbitmq:
+  uri: amqp://localhost:5672
