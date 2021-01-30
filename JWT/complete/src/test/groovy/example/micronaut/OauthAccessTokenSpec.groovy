@@ -30,7 +30,7 @@ class OauthAccessTokenSpec extends Specification {
         String username = 'sherlock'
 
         when: 'login endpoint is called with valid credentials'
-        def creds = new UsernamePasswordCredentials(username, "password")
+        def creds = new UsernamePasswordCredentials(username, "asa8d946qwrwuivoashdiuqewas98d842121e98165ads")
         HttpRequest request = HttpRequest.POST('/login', creds)
         BearerAccessRefreshToken rsp = client.toBlocking().retrieve(request, BearerAccessRefreshToken)
 

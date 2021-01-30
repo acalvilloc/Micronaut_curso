@@ -17,7 +17,7 @@ class DeclarativeHttpClientWithJwtSpec extends Specification {
 
     def "Verify JWT authentication works with declarative @Client"() {
         when: 'Login endpoint is called with valid credentials'
-        UsernamePasswordCredentials creds = new UsernamePasswordCredentials("sherlock", "password")
+        UsernamePasswordCredentials creds = new UsernamePasswordCredentials("sherlock", "asa8d946qwrwuivoashdiuqewas98d842121e98165ads")
         BearerAccessRefreshToken loginRsp = appClient.login(creds) 
 
         then:

@@ -34,7 +34,7 @@ class JwtAuthenticationSpec extends Specification {
 
     void "upon successful authentication, a Json Web token is issued to the user"() {
         when: 'Login endpoint is called with valid credentials'
-        UsernamePasswordCredentials creds = new UsernamePasswordCredentials("sherlock", "password")
+        UsernamePasswordCredentials creds = new UsernamePasswordCredentials("sherlock", "asa8d946qwrwuivoashdiuqewas98d842121e98165ads")
         HttpRequest request = HttpRequest.POST('/login', creds) 
         HttpResponse<BearerAccessRefreshToken> rsp = client.toBlocking().exchange(request, BearerAccessRefreshToken) 
 

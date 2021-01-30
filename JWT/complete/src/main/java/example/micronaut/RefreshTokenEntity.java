@@ -1,4 +1,3 @@
-//tag::clazzwithoutsettersandgetters[]
 package example.micronaut;
 
 import edu.umd.cs.findbugs.annotations.NonNull;
@@ -37,8 +36,6 @@ public class RefreshTokenEntity {
 
     public RefreshTokenEntity() {
     }
-
-    //end::clazzwithoutsettersandgetters[]
 
     @NonNull
     public Long getId() {

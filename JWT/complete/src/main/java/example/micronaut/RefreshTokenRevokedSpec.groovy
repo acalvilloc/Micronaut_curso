@@ -50,7 +50,7 @@ class RefreshTokenRevokedSpec extends Specification {
         when:
         Argument<BearerAccessRefreshToken> bodyArgument = Argument.of(BearerAccessRefreshToken)
         Argument<Map> errorArgument = Argument.of(Map)
-        client.toBlocking().exchange(HttpRequest.POST("/login/access_token", new TokenRefreshRequest(signedRefreshToken)), bodyArgument, errorArgument)
+        client.toBlocking().exchange(HttpRequest.POST("/oauth/access_token", new TokenRefreshRequest(signedRefreshToken)), bodyArgument, errorArgument)
 
         then:
         HttpClientResponseException e = thrown()
