@@ -1,3 +1,11 @@
 micronaut:
   application:
     name: complete
+
+#Parámetros de configuración para API bintray V1. Estos se conectan en automático mediante las anotaciones
+bintray:
+  organization: micronaut
+  repository: profiles
+  apiversion: v1
+  username: acalvillm
+  token: 22c4e1601d6f8ffec9ce267e5f1a72fa2dbd4048
