@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: complete
+micronaut:
+  security:
+    authentication: bearer  
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator: 
+              secret: miSecreto 
+
+micronaut:
+  security:
+    token:
+      jwt:
+        generator:
+          refresh-token:
+            secret: miSecreto
