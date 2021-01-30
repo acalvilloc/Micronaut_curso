@@ -1,0 +1,34 @@
+micronaut:
+  application:
+    name: complete
+micronaut:
+  security:
+    authentication: bearer 
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator: 
+              secret: pleaseChangeThisSecretForANewOne  
+    ldap:
+      default: 
+        context:
+          server: 'ldap://ldap.forumsys.com:389'  
+          managerDn: 'cn=read-only-admin,dc=example,dc=com'  
+          managerPassword: 'password'  
+        search:
+          base: "dc=example,dc=com"  
+        groups:
+          enabled: true  
+          base: "dc=example,dc=com" 
+
+
+hibernate:
+  hbm2ddl:
+    auto: update
+dataSource:
+  driverClassName: org.h2.Driver
+  username: sa
+  password: ''
+  url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+
