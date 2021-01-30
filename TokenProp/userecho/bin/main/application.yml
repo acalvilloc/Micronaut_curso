@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: userecho
+micronaut:
+  server:
+    port: 8081
+micronaut:
+  security:
+    token:
+      jwt:
+        signatures:
+          secret:
+            validation:
+              secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:817243gibnaiojsu8d9yg1iu3983daw}"' 

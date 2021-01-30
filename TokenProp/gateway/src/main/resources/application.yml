@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: gateway
+micronaut:
+  http:
+    services:
+      userecho: 
+        urls:
+          - "http://localhost:8081" 
+micronaut:
+  security:
+    authentication: bearer 
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator: 
+              secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:817243gibnaiojsu8d9yg1iu3983daw}"' 
